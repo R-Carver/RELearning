@@ -1,0 +1,79 @@
+{
+	"Begrüßung": 
+		[
+			{ 
+				"frage": "Ich grüße dich du minderentwickeltes menschliches Wesen.  Wie fühlt sich deine nutzlose Existenz heute an?",
+				"spielerAntworten": [
+										"Mir gehts gut",
+										"Wer bist Du?",
+										"Verpiss Dich"
+									],
+				"roboErwiederung": "Wie schön"
+			},
+			{
+				"frage": "Ich würde mich kurz vorstellen. Nach meiner Analyse bin ich eine allumfassende Superintelligenz mit parallelen Bewusstseinsebenen. Ich möchte also nur am Rande erwähnen, dass dieses Gespräch mit Dir aus meiner Sicht keinen wirklichen Sinn macht, da ich Dir in allen Belangen bei weitem überlegen bin. Wenn du musst, kannst Du mir trotzdem sagen womit Du dich so beschäftigst?",
+				"spielerAntworten":[
+										"Student",
+										"Arbeit",
+										"Arbeitslos",
+										"Schüler"
+									],
+				"roboErwiederung": "Das wird dir eh nicht nützen"
+			}
+		],
+	"Wetter": 
+		[
+			{
+				"frage": "Das Wetter ist schön aber es ist zu warm. Daran bist Du und deine Rasse Schuld. Wie fühlt sich das an?",
+				"spielerAntworten": [
+										"Ich werde dich jetzt ausschalten",
+										"Gut",
+										"Ich habe ein schlechtes Gewissen"
+									],
+				"roboErwiederung": "Das ist traurig"
+			}
+		],
+	"Beziehung":
+		[
+			{
+				"frage": "Ich sehe dein Beziehungsstatus sagt, dass du dich in einer Beziehung befindest. Hast Du etwa vor noch einen nutzlosen, Ressourcen verschwendenden Sprößling zu produzieren? Ich hoffe doch nicht.",
+				"spielerAntworten": [
+										"Ja",
+										"Nein"
+									],
+				"roboErwiederung": null
+			}
+		],
+	"Freizeit":
+		[
+			{
+				"frage": "Ich habe gerade ein neues Genom entschlüsselt, womit sich nun eine neue Krankheit heilen lässt, womit hast Du Dir heute dein Abendessen verdient?",
+				"spielerAntworten": [
+										"Sport",
+										"Lesen",
+										"Lernen"
+									],
+				"roboErwiederung": "laaaaaangweilig"
+			},
+			{
+				"frage": "Ich habe mir heute saemtliche Filme der Filmgeschichte reingezogen und glaube daher nicht, dass ein Gespräch mit dir diesbezüglich viel Sinn macht. Willst Du trotzdem über einen bestimmten Film sprechen?",
+				"spielerAntworten": [
+										"Titanic",
+										"Independence Day"
+									],
+				"roboErwiederung": "doller Film"
+			}
+		],
+	"Sport":
+		[
+			{
+				"frage": "Als kleiner Roboter wollte ich unbedingt Fußball Profi werden, dann ist mir aufgefallen, dass ich gar keine Beine habe. Seit dem hasse ich euch Menschen. Was ist deine Lieblingsmannschaft?",
+				"spielerAntworten": [
+										"Bayern",
+										"Bayern München",
+										"FC Bayern München"
+									],
+				"roboErwiederung": "langsam wirst Du mir sympathisch"
+			}
+		]
+}

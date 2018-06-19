@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'de.hcmlab.prl'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'de.hcmlab.tools:reeti-rest-api:0.3.0-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
