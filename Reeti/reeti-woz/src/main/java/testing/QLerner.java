@@ -1,6 +1,8 @@
 package testing;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class QLerner {
@@ -14,14 +16,16 @@ public class QLerner {
 	//hier die Themen hinzufügen
 	//ACHTUNG: Aktionen in der QWert Tabelle haben jeweil den Index wie
 	//im themen array
-	String[] themen = {"Begr", "Frei", "Sp", "We", "Begr"};
+	String[] themen = { "Begr", "Frei", "Sp", "We", "Bez", "Vor", "Ver", "Ber", "Stud", "Par"};
 	//zur Vereinfachung speichern wir hier den index der jeweiligen Aktion
 	Map indexHelper = new HashMap<String, Integer>();
+	public Map abkurzHelper = new HashMap<String, String>();
 	
 	private QLerner() {
 		
 		//initialize QTable
 		initQTable(themen);
+		initAbkurzHelper();
 	}
 	
 	public static QLerner getInstance() {
@@ -40,6 +44,49 @@ public class QLerner {
 		initIndexHelper();
 		
 		//TODO: Hier wird die QTabelle erstellt von Leomoffel Kennekaka
+		LinkedList<String> themenList = new LinkedList<String>();
+		for (String t : actions) {
+			themenList.add(t);
+		}
+		
+		int i = 0;
+		for (String t : themenList) {
+			String root = themenList.get(i);
+			createString(themenList, root, root);
+
+			i++;
+		}
+	}
+	
+	public void createString(List<String> actions, String thema, String root) {
+		String newState;
+		List<String> newActions = new LinkedList<String>(actions);
+
+		for (String S : actions) {
+			
+			if(!S.equals(root)) {
+				newState = thema + "-" + S;
+				System.out.println(newState);
+				qTable.put(newState, createSmallTalkAction());
+
+				newActions.remove(S);
+				createString(newActions, newState, root);
+			}
+		}
+
+		 System.out.println(qTable.size());
+	}
+	
+	public SmallTalkAction[] createSmallTalkAction() {
+		SmallTalkAction[] actionArray = new SmallTalkAction[themen.length];
+		SmallTalkAction actionItem;
+
+		for (int i = 0; i < themen.length; i++) {
+			actionItem = new SmallTalkAction(themen[i], 0);
+			actionArray[i] = actionItem;
+		}
+
+		return actionArray;
 	}
 	
 	private void initIndexHelper() {
@@ -93,5 +140,17 @@ public class QLerner {
 		return out;
 	}
 	
-	
+	private void initAbkurzHelper() {
+		
+		abkurzHelper.put("Begrüßung", "Begr");
+		abkurzHelper.put("Freizeit", "Frei");
+		abkurzHelper.put("Sport", "Sp");
+		abkurzHelper.put("Wetter", "We");
+		abkurzHelper.put("Beziehung", "Bez");
+		abkurzHelper.put("Vorstellung", "Vor");
+		abkurzHelper.put("Verabschiedung", "Ver");
+		abkurzHelper.put("Beruf", "Ber");
+		abkurzHelper.put("Studium", "Stud");
+		abkurzHelper.put("Party", "Par");
+	}
 }

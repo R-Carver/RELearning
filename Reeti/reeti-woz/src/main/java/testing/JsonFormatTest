@@ -1,0 +1,23 @@
+{	
+	"Gespraech1":
+	{
+		{
+			"belohnung":0,
+			"thema":"We",
+			"dauer":2.34
+		},
+		{
+			"belohnung":0,
+			"thema":"Bez",
+			"dauer":5.24
+		},
+		{
+			...
+		}
+		
+	},
+	"Gespraech2":
+	{
+		...
+	}
+}

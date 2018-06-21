@@ -10,4 +10,5 @@ public class SmallTalkAction {
 		this.name = name;
 		this.qValue = qValue;
 	}
+	
 }
